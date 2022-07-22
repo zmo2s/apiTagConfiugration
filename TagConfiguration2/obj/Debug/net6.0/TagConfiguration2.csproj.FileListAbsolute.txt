@@ -41,3 +41,5 @@ C:\Developpements\Github\TagConfiguration2\TagConfiguration2\obj\Debug\net6.0\re
 C:\Developpements\Github\TagConfiguration2\TagConfiguration2\obj\Debug\net6.0\TagConfiguration2.pdb
 C:\Developpements\Github\TagConfiguration2\TagConfiguration2\obj\Debug\net6.0\TagConfiguration2.genruntimeconfig.cache
 C:\Developpements\Github\TagConfiguration2\TagConfiguration2\obj\Debug\net6.0\ref\TagConfiguration2.dll
+C:\Developpements\Github\TagConfiguration2\TagConfiguration2\bin\Debug\net6.0\TagConfiguration2.xml
+C:\Developpements\Github\TagConfiguration2\TagConfiguration2\obj\Debug\net6.0\TagConfiguration2.xml

@@ -27,6 +27,11 @@ namespace TagConfiguration2.Controllers
         public async Task<List<TagInput>> Get() =>
             await _tagInputService.GetAsync();
 
+        /// <summary>
+        /// Get a specific row who contains the id.
+        /// </summary>
+        /// <param name="id">ID length must be of 24.</param>
+        /// <returns>La colelction spécifique</returns>
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<TagInput>> Get(string id)
