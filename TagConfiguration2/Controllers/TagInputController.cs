@@ -32,6 +32,7 @@ namespace TagConfiguration2.Controllers
         /// </summary>
         /// <param name="id">ID length must be of 24.</param>
         /// <returns>La colelction spécifique</returns>
+        [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<TagInput>> Get(string id)
