@@ -2,6 +2,7 @@
 namespace TagConfiguration2.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using MongoDB.Bson;
     using TagConfiguration2.Models;
     using TagConfiguration2.Services;
 
@@ -26,6 +27,8 @@ namespace TagConfiguration2.Controllers
         [HttpGet]
         public async Task<List<TagInput>> Get() =>
             await _tagInputService.GetAsync();
+
+      
 
         /// <summary>
         /// Get a specific row who contains the id.
