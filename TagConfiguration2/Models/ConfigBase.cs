@@ -1,13 +1,15 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
 
 namespace TagConfiguration2.Models
 {
+   
+   [BsonIgnoreExtraElements]
     public class ConfigBase
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+
+        public ObjectId _id { get; set; }
         public bool dureeEvent { get; set; }
         public bool isActivateTag { get; set; }
         public bool isLoggerActivate { get; set; }
@@ -18,8 +20,8 @@ namespace TagConfiguration2.Models
         public bool useBUzzer { get; set; }
         public bool useLED { get; set; }
         public bool useModConnected { get; set; }
-        public int _idTagInput { get; set; }
-        public int _idConfig400 { get; set; }
-        public int _idConfigSensor { get; set; }
+        public Config400 config400 { get; set; }
+       
+        
     }
 }

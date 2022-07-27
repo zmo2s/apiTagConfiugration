@@ -25,11 +25,11 @@ namespace TagConfiguration2.Controllers
         /// <response code="200">get result of tag</response>
         /// <response code="400">tagInput table row is missing</response>
         [HttpGet]
-        public async Task<List<TagInput>> Get() =>
+        public async Task<List<Config>> Get() =>
             await _tagInputService.GetAsync();
 
       
-
+        /*
         /// <summary>
         /// Get a specific row who contains the id.
         /// </summary>
@@ -38,7 +38,7 @@ namespace TagConfiguration2.Controllers
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpGet("{id:length(24)}")]
-        public async Task<ActionResult<TagInput>> Get(string id)
+        public async Task<ActionResult<TagInput>> Get(ObjectId id)
         {
             var tagInput = await _tagInputService.GetAsync(id);
 
@@ -49,7 +49,7 @@ namespace TagConfiguration2.Controllers
 
             return tagInput;
         }
-
+        /*
         [HttpPost]
         public async Task<IActionResult> Post(TagInput newTagInput)
         {
@@ -59,7 +59,7 @@ namespace TagConfiguration2.Controllers
         }
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpPut("{id:length(24)}")]
-        public async Task<IActionResult> Update(string id, TagInput updatedTagInput)
+        public async Task<IActionResult> Update(ObjectId id, TagInput updatedTagInput)
         {
             var tagInput = await _tagInputService.GetAsync(id);
 
@@ -76,7 +76,7 @@ namespace TagConfiguration2.Controllers
         }
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpDelete("{id:length(24)}")]
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(ObjectId id)
         {
             var tagInput = await _tagInputService.GetAsync(id);
 
@@ -85,10 +85,11 @@ namespace TagConfiguration2.Controllers
                 return NotFound("id doesn't exist");
             }
 
-            await _tagInputService.RemoveAsync(id);
+            await _tagInputService.RemoveAsync(id.ToString());
 
             return NoContent();
         }
+        */
     }
 
 }

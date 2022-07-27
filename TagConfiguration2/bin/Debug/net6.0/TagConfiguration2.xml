@@ -12,12 +12,5 @@
             <response code="200">get result of tag</response>
             <response code="400">tagInput table row is missing</response>
         </member>
-        <member name="M:TagConfiguration2.Controllers.TagInputController.Get(System.String)">
-            <summary>
-            Get a specific row who contains the id.
-            </summary>
-            <param name="id">ID length must be of 24.</param>
-            <returns>La colelction spécifique</returns>
-        </member>
     </members>
 </doc>
